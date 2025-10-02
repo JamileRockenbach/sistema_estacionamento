@@ -27,8 +27,8 @@ Interação simples via console.
 
 ### Tecnologias:
 
- - C# 10
- - .NET 9
+ - C# 
+ - .NET 
 
 ---
 
