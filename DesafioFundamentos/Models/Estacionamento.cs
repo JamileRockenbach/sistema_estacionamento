@@ -14,20 +14,20 @@ namespace DesafioFundamentos.Models
 
         public void AdicionarVeiculo()
         {
-            Console.WriteLine("Digite a placa do veículo para estacionar:");
+            Console.WriteLine(">> Digite a placa do veículo para estacionar:");
             string placa = Console.ReadLine();
             veiculos.Add(placa);
-            Console.WriteLine($"Veículo {placa} cadastrado com sucesso!!");
+            Console.WriteLine($"Veículo {placa} cadastrado com sucesso :)");
         }
 
         public void RemoverVeiculo()
         {
-            Console.WriteLine("Digite a placa do veículo para remover:");
+            Console.WriteLine(">> Digite a placa do veículo para remover:");
             string placa = Console.ReadLine();
 
             if (veiculos.Any(x => x.Equals(placa, StringComparison.OrdinalIgnoreCase)))
             {
-                Console.WriteLine("Digite a quantidade de horas que o veículo permaneceu estacionado:");
+                Console.WriteLine(">> Digite a quantidade de horas que o veículo permaneceu estacionado:");
                 string entrada = Console.ReadLine();
 
                 if (!int.TryParse(entrada, out int horas) || horas < 0)
@@ -52,7 +52,7 @@ namespace DesafioFundamentos.Models
         {
             if (veiculos.Any())
             {
-                Console.WriteLine("Os veículos estacionados são:");
+                Console.WriteLine("| Os veículos estacionados são:");
                 foreach (string v in veiculos)
                 {
                     Console.WriteLine(v);
